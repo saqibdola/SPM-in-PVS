@@ -36,12 +36,10 @@ skosimp expand "sequencer" expand "Tle" expand "Deq" expand "Fifo1e" expand "nex
 
 skosimp expand "Sync" expand "Teq" expand "Deq" assert.
 
-skosimp 
-expand "SyncD" expand "Teq" expand "Fifo1" expand "Tle" expand "next" expand "Sync" expand "Deq" flatten assert typepred "<" 
+skosimp expand "SyncD" expand "Teq" expand "Fifo1" expand "Tle" expand "next" expand "Sync" expand "Deq" flatten assert typepred "<" 
 expand "strict_order?" expand "irreflexive?" expand "transitive?" flatten inst? inst? assert grind.
 
-skosimp skolem! inst? 
-expand "Fifo1" expand "Sync" expand "Tle" expand "next" expand "Teq" expand "Deq" flatten assert.
+skosimp skolem! inst? expand "Fifo1" expand "Sync" expand "Tle" expand "next" expand "Teq" expand "Deq" flatten assert.
 
 skosimp assert expand "Sync" expand "SyncD" expand "Fifo1" expand "next" expand "suffix" expand "Teq" expand "Deq" expand "Tle" assert flatten typepred "<" 
 expand "strict_order?" expand "transitive?" expand "irreflexive?" assert.
