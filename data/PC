@@ -8,7 +8,6 @@ flatten split expand "irreflexive?" propax expand "transitive?" skeep inst -4 "z
 
 skosimp expand "Teq" assert.
 
-
 skosimp expand "Teq" expand "next" assert.
 
 skeep expand "Tle" typepred "<" expand "strict_order?" flatten expand "transitive?" 
@@ -56,7 +55,6 @@ inst "T(s1!1)""T(s3!1)""T(s2!1)" assert.
 
 skosimp expand "Fifon" propax.
 
-
 skosimp expand "Tltt" expand "b2n" inst?.
 
 skosimp expand "Teqt" expand "b2n" inst?.
@@ -72,8 +70,7 @@ skosimp expand "Tltt" skosimp expand "FrS" propax.
 
 skosimp expand "Tgtt" skosimp typepred "t!1" expand "FrS" assert.
 
-skosimp 
-expand "Merge" expand "Teqt" expand "next" expand "b2n" inst? skosimp expand "FrS" propax.
+skosimp expand "Merge" expand "Teqt" expand "next" expand "b2n" inst? skosimp expand "FrS" propax.
 
 skosimp expand "Timert" expand "Fifo1"
  expand "SyncD" expand "Sync" expand "next" expand "Tle" expand "Teq" expand "Deq" flatten split inst -1 "t!1" assert assert expand "Tltt" skosimp grind.
